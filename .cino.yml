@@ -1,0 +1,4 @@
+main: ./src/main.ino
+tests:
+  - name: ecdh
+    file: ./test/crypto/ecdh.ino
