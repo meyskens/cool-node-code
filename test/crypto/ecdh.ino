@@ -29,9 +29,9 @@ void setup() {
   a = millis();
   int r = uECC_shared_secret(public2, private1, secret1, curve);
   b = millis();
-  Serial.print("Error: Shared secret 1 in "); Serial.println(b-a);
+  Serial.print("Shared secret 1 in "); Serial.println(b-a);
   if (!r) {
-    Serial.print("shared_secret() failed (1)\n");
+    Serial.print("Error: shared_secret() failed (1)\n");
     return;
   }
 
