@@ -3,7 +3,7 @@
 
 void setup() {
   Serial.begin(9600);
-  Serial.print("Testing ecc\n");
+  Serial.println("Testing ecc");
   uECC_set_rng(&RNG);
 
   const struct uECC_Curve_t * curve = uECC_secp160r1();
