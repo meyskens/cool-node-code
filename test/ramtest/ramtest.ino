@@ -23,7 +23,7 @@ MessagePayload getTestStuct() {
 } 
 
 test(usagePerStruct) {
-    Serial.print("Initial free RAM");
+    Serial.print("Initial free RAM ");
     Serial.println(freeRam());
     MessagePayload test = getTestStuct();
     Serial.print("Free RAM after struct");
@@ -31,14 +31,26 @@ test(usagePerStruct) {
 }
 
 test(usageInIfScope) {
-    Serial.print("Initial free RAM");
+    Serial.print("Initial free RAM ");
     Serial.println(freeRam());
     if (true) {
         MessagePayload test = getTestStuct();
-        Serial.print("Free RAM after struct");
+        Serial.print("Free RAM after struct ");
         Serial.println(freeRam());
     }
     Serial.print("Free RAM after if");
+    Serial.println(freeRam());
+}
+
+test(usageInFor) {
+    Serial.print("Initial free RAM  ");
+    Serial.println(freeRam());
+    for (int i; i <30; i++) {
+        MessagePayload test = getTestStuct();
+        Serial.print("Free RAM after struct ");
+        Serial.println(freeRam());
+    }
+    Serial.print("Free RAM after for");
     Serial.println(freeRam());
 }
 
