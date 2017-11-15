@@ -38,20 +38,20 @@ test(usageInIfScope) {
         Serial.print("Free RAM after struct ");
         Serial.println(freeRam());
     }
-    Serial.print("Free RAM after if");
+    Serial.print("Free RAM after if ");
     Serial.println(freeRam());
 }
 
 test(usageInFor) {
     Serial.print("Initial free RAM  ");
     Serial.println(freeRam());
-    for (int i; i <30; i++) {
+    for (int i = 0; i <30; i++) {
         MessagePayload test = getTestStuct();
         test.senderID = i;
         Serial.print("Free RAM after struct ");
         Serial.println(freeRam());
     }
-    Serial.print("Free RAM after for");
+    Serial.print("Free RAM after for ");
     Serial.println(freeRam());
 }
 
