@@ -2,3 +2,5 @@ main: ./src/main.ino
 tests:
   - name: ecdh
     file: ./test/crypto/ecdh.ino
+  - name: ramtest
+    file: ./test/ramtest/ramtest.ino
