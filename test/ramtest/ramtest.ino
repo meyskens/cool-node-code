@@ -47,6 +47,7 @@ test(usageInFor) {
     Serial.println(freeRam());
     for (int i; i <30; i++) {
         MessagePayload test = getTestStuct();
+        test.senderID = i;
         Serial.print("Free RAM after struct ");
         Serial.println(freeRam());
     }
