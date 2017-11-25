@@ -4,3 +4,5 @@ tests:
     file: ./test/crypto/ecdh.ino
   - name: ramtest
     file: ./test/ramtest/ramtest.ino
+  - name: stringtest
+    file: ./test/stringtest/stringtest.ino
