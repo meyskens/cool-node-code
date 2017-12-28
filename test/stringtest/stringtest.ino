@@ -11,31 +11,31 @@ bool compare(char data[], char compare[], int len) {
 }
 
 test(compareSucceed) {
-    char test1[] = "KEY1234"
-    char test2[] = "KEY"
-    bool ok = compare(test1, test2, 3)
-    assertTrue(ok)
+    char test1[] = "KEY1234";
+    char test2[] = "KEY";
+    bool ok = compare(test1, test2, 3);
+    assertTrue(ok);
 }
 
 test(compareFalse) {
-    char test1[] = "KOY1234"
-    char test2[] = "KEY"
-    bool ok = compare(test1, test2, 3)
-    assertFalse(ok)
+    char test1[] = "KOY1234";
+    char test2[] = "KEY";
+    bool ok = compare(test1, test2, 3);
+    assertFalse(ok);
 }
 
 test(concatStrint) {
-    char test1[] = "OK"
+    char test1[] = "OK";
     char out[5];
     sprintf(out, "%s%", "KEY", publicKey);
 
-    assertEqual(out, "KEYOK")
+    assertEqual(out, "KEYOK");
 }
 
 void setup() {
     Serial.begin(9600);
     while(!Serial);
-  }
+}
   
 void loop() {
     Test::run();
