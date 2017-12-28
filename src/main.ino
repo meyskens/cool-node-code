@@ -1,10 +1,9 @@
 #define NODEID         2    //0 = broadcast, 1= central node
 #include <SimpleMesh.h>
 
-
 #include <avr/power.h>
 
-// Sensor libraries!
+// Sensor libraries
 #include <OneWire.h> 
 #include <DallasTemperature.h>
 #include <Wire.h> // Must include Wire library for I2C
@@ -36,7 +35,6 @@ int countclose=0; // count for door close algo
 bool doorIsOpen = false;
 int doorOpenings = 0;
 
-// timer loop
 unsigned long lastTime = 0;
 
 void setup() {
@@ -151,7 +149,7 @@ void loop() {
   doTimers();
 
   //clock_prescale_set(clock_div_256);
-  //delay(1000/256); // clock gets set incorrect
+  //delay(1000/256);
   //clock_prescale_set(clock_div_1);
   delay(100);
 }
